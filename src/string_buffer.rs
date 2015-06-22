@@ -27,6 +27,7 @@ use std::{cmp, fmt};
 const MAX_CAPACITY: usize = 0xffff;
 const INIT_CAPACITY: usize = 0xff; 
 
+#[derive(Debug)]
 pub struct StringBuffer {
     first: Box<StringNode>,
     // last: &self StringNode
@@ -46,6 +47,7 @@ pub struct Chars<'a> {
     abs_byte: usize,
 }
 
+#[derive(Debug)]
 struct StringNode {
     data: String,
     next: Option<Box<StringNode>>,
